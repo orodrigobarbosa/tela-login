@@ -58,7 +58,12 @@ body{
     color: #00ff88;
     font-weight: 800;
     margin: 0;
+    
 }   
+
+.left-login-image{
+    width: 35vw;
+}
 
 .textfield {
     width: 100%;
