@@ -6,7 +6,7 @@ body{
     
     width: 100vw;
     height: 100vh;
-    /*cor de fundo */
+
     background: #201b2c;
     display: flex; /* faz com que as coisas fiquem lado a lado */
     justify-content: center;
@@ -19,7 +19,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*flex direction para colocar um elemento sobre o outro, mesmo usando display flex */
+/*flex direction para colocar um elemento sobre o outro, mesmo usando display flex */
     flex-direction: column;
 
 }
@@ -47,7 +47,68 @@ body{
     background: #2f2841;
     border-radius: 20px;
 
-    /* sombra no card. eixo y, eixo x, blur e cor*/
+/* sombra no card. eixo x(sombra direita ou esquerda), eixo y(cima/baixo), blur e cor*/
     box-shadow: 0px 10px 40px #00000056;
 
+}
+
+.card-login > h1{
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}   
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+/*corrigindo o input que está passando do padding */
+    box-sizing: border-box;
+/*tira o contorno do input quando é clicado para digitar*/
+    outline: none;
+
+}
+
+/*cor do label  para branco, ja que usamos a cor dark*/
+
+.textfield > label{
+    color: #f0ffffde;
+
+/*afastar para cima  Usuário e Senha do input */
+    margin-bottom: 10px;
+    margin: 10px;
+}
+
+.textfield > input::placeholder{
+    color: #f0ffff94 ;
+}
+
+.botao-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px /*-12 spreading*/ #00ff8052;
 }
