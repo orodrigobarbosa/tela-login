@@ -1,36 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=REM:wght@400;700&family=Roboto:wght@400;700&display=swap');
-body{
+
+
+body {
     margin: 0;
-    font-family: 'Roboto' , 'sans-serif' ;
+    font-family: 'Roboto', 'sans-serif';
 }
 
-.main-login{
-    
+body * {
+    box-sizing: border-box;
+
+}
+
+.main-login {
+
     width: 100vw;
     height: 100vh;
 
     background: #201b2c;
-    display: flex; /* faz com que as coisas fiquem lado a lado */
+    display: flex;
+    /* faz com que as coisas fiquem lado a lado */
     justify-content: center;
     align-items: center;
 }
 
-.left-login{
+.left-login {
     width: 50vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-/*flex direction para colocar um elemento sobre o outro, mesmo usando display flex */
+    /*flex direction para colocar um elemento sobre o outro, mesmo usando display flex */
     flex-direction: column;
 
 }
 
-.left-login > h1 {
- color: #77ffc0;
+.left-login>h1 {
+    color: #77ffc0;
+    font-size: 3vw;
 }
 
-.right-login{
+
+/* responsividade da animacao */
+.left-login-image {
+    width: 35vw;
+}
+
+
+.right-login {
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -39,7 +55,7 @@ body{
 
 }
 
-.card-login{
+.card-login {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -49,21 +65,19 @@ body{
     background: #2f2841;
     border-radius: 20px;
 
-/* sombra no card. eixo x(sombra direita ou esquerda), eixo y(cima/baixo), blur e cor*/
+    /* sombra no card. eixo x(sombra direita ou esquerda), eixo y(cima/baixo), blur e cor*/
     box-shadow: 0px 10px 40px #00000056;
 
 }
 
-.card-login > h1{
+.card-login>h1 {
     color: #00ff88;
     font-weight: 800;
     margin: 0;
-    
-}   
 
-.left-login-image{
-    width: 35vw;
 }
+
+
 
 .textfield {
     width: 100%;
@@ -72,10 +86,10 @@ body{
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0px;
-    
+
 }
 
-.textfield > input{
+.textfield>input {
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -84,25 +98,25 @@ body{
     color: #f0ffffde;
     font-size: 12pt;
     box-shadow: 0px 10px 40px #00000056;
-/*corrigindo o input que está passando do padding */
+    /*corrigindo o input que está passando do padding */
     box-sizing: border-box;
-/*tira o contorno do input quando é clicado para digitar*/
+    /*tira o contorno do input quando é clicado para digitar*/
     outline: none;
 
 }
 
 /*cor do label  para branco, ja que usamos a cor dark*/
 
-.textfield > label{
+.textfield>label {
     color: #f0ffffde;
 
-/*afastar para cima  Usuário e Senha do input */
+    /*afastar para cima  Usuário e Senha do input */
     margin-bottom: 10px;
     margin: 10px;
 }
 
-.textfield > input::placeholder{
-    color: #f0ffff94 ;
+.textfield>input::placeholder {
+    color: #f0ffff94;
 }
 
 .botao-login {
@@ -118,5 +132,48 @@ body{
     color: #2b134b;
     background: #00ff88;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px /*-12 spreading*/ #00ff8052;
+    box-shadow: 0px 10px 40px -12px
+        /*-12 spreading*/
+        #00ff8052;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    /*ocular o titulo em tela menor */
+    .left-login>h1 {
+        display: none;
+    }
+
+    /*card ocupar quase toda a tela quando for menor */
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 40vh;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+}
+
+
+
+/*Media queries abaixo significa: enquanto for na tela, uma largura de 950px, o card seja reajustado para a config abaixo */
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+
+
 }
