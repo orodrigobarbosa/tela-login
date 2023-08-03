@@ -8,7 +8,6 @@ body {
 
 body * {
     box-sizing: border-box;
-
 }
 
 .main-login {
@@ -36,13 +35,13 @@ body * {
 
 .left-login>h1 {
     color: #77ffc0;
-    font-size: 3vw;
+    font-size: 20pt;
 }
 
 
 /* responsividade da animacao */
 .left-login-image {
-    width: 35vw;
+    width: 65%;
 }
 
 
@@ -137,6 +136,16 @@ body * {
         #00ff8052;
 }
 
+
+
+/*Media queries abaixo significa: enquanto for na tela, uma largura de 950px, o card seja reajustado para a config abaixo */
+@media only screen and (max-width: 2560px) {
+    .card-login {
+        width: 70%;
+    }
+
+}
+
 @media only screen and (max-width: 600px) {
     .main-login {
         flex-direction: column;
@@ -145,6 +154,7 @@ body * {
     /*ocular o titulo em tela menor */
     .left-login>h1 {
         display: none;
+
     }
 
     /*card ocupar quase toda a tela quando for menor */
@@ -153,26 +163,18 @@ body * {
         height: auto;
     }
 
+    .left-login-image {
+        width: 40vh;
+    }
+
     .right-login {
         width: 100%;
         height: auto;
     }
 
-    .left-login-image {
-        width: 40vh;
-    }
 
     .card-login {
         width: 90%;
-    }
-}
-
-
-
-/*Media queries abaixo significa: enquanto for na tela, uma largura de 950px, o card seja reajustado para a config abaixo */
-@media only screen and (max-width: 950px) {
-    .card-login {
-        width: 85%;
     }
 
 
